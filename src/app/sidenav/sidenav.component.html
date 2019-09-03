@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark mat-elevation-z10 bgColor fixed-top" id="sideNav">
+  <a class="navbar-brand js-scroll-trigger" href="#page-top">
+    <span class="d-block d-lg-none">Obakeng Phikiso</span>
+    <span class="d-none d-lg-block">
+      <img class="img-fluid img-profile rounded-circle mx-auto mb-2 mat-elevation-z10" src="../../assets/obakeng.phikiso (1).jpg" alt="">
+    </span>
+  </a>
+  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-collapse collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav justify-content-start">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/about']" routerLinkActive="router-link-active" >About<i class="fas fa-address-card  float-right"></i></a>
+      </li>
+      <li class="nav-item" mat-button>
+        <a class="nav-link js-scroll-trigger" [routerLink]="['/experience']" routerLinkActive="router-link-active" >Experience <i class="fas fa-lightbulb float-right" ></i></a>
+      </li>
+      <li class="nav-item" mat-button>
+        <a class="nav-link js-scroll-trigger" [routerLink]="['/education']" routerLinkActive="router-link-active" >Education<i class="fas fa-university  float-right"></i></a>
+      </li>
+      <li class="nav-item" mat-button>
+        <a class="nav-link js-scroll-trigger" [routerLink]="['/skills']" routerLinkActive="router-link-active" >Skills <i class="fas fa-star float-right" ></i></a>
+      </li>
+      <li class="nav-item" mat-button>
+        <a class="nav-link js-scroll-trigger" [routerLink]="['/interests']" routerLinkActive="router-link-active" >Interests <i class="fas fa-chess-board float-right"></i> </a>
+      </li>
+      <li class="nav-item" mat-button>
+        <a class="nav-link js-scroll-trigger" [routerLink]="['/awards']" routerLinkActive="router-link-active" >Awards<i class="fas fa-certificate float-right"></i></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>
