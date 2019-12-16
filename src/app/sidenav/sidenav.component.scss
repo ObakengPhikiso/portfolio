@@ -1,11 +1,16 @@
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 800;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  color: lightcyan;
+  color: #fff;
 }
 .nav-item:hover {
-  background-color: darkslategrey;
+  background-color: #33AEEE;
+  @include transition-ease();
 }
 
 #sideNav .navbar-toggler:focus {
@@ -38,7 +43,7 @@
   #sideNav .navbar-brand .img-profile {
     max-width: 10rem;
     max-height: 10rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    border: 0.5rem solid #fff;
   }
   #sideNav .navbar-collapse {
     display: -webkit-box;
@@ -68,11 +73,6 @@
   }
 }
 .bgColor {
-  background: #141e30; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #243b55, #141e30); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #243b55,
-    #141e30
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #3C9FF5; /* fallback for old browsers */
+
 }
