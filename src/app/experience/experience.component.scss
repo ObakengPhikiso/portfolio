@@ -1,7 +1,10 @@
 @mixin transition-ease {
   transition: all 0.9s ease-in-out;
 }
-
+p {
+  padding: 0;
+  margin: 0;
+}
 #content {
   background: linear-gradient(to right, rgba(#fff, 0.9),
       rgba(#fff, 1)),
@@ -15,6 +18,10 @@
   font-variant-caps: all-petite-caps;
   font-size: 500;
 }
+.subheading {
+    font-variant-caps: all-petite-caps;
+    font-size: 500;
+}
 
 .content {
   margin: 0;
@@ -23,4 +30,10 @@
 
 #surname {
   color: #3C9FF5;
+}
+.title {
+    color: #fff;
+}
+.experience-description {
+  color: #000;
 }

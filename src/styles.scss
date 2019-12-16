@@ -18,7 +18,7 @@ body {
   }
 }
 #content {
-  background: #fff; /* fallback for old browsers */
+  background: #fff;      
   height: 100%;
 }
 h1,
@@ -29,8 +29,6 @@ h5,
 h6 {
   font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-weight: 700;
-  text-transform: uppercase;
-  color: white;
 }
 
 h1 {
@@ -44,4 +42,15 @@ h2 {
 
 h3 {
   font-size: 2rem;
+}
+.footer {
+  background: #3C9FF5;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+.period {
+  font-size: xx-large;
+  font-weight: bolder;
+  font-style: normal;
 }
