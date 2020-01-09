@@ -1,0 +1,67 @@
+@mixin transition-ease {
+    transition: all 0.9s ease-in-out;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+  }
+  #content {
+    background: linear-gradient(to right, rgba(#fff, 0.9),
+        rgba(#fff, 1)),
+      url('../../assets/IMG_E0863.png') center top;
+    background-size: cover;
+    @include transition-ease;
+  }
+  
+  .heading {
+    color: #3C9FF5;
+    font-variant-caps: all-petite-caps;
+    font-size: 500;
+  }
+  .subheading {
+      font-variant-caps: all-petite-caps;
+      font-size: 500;
+      color: #3C9FF5;
+  }
+  
+  .content {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #surname {
+    color: #3C9FF5;
+  }
+  .title {
+      color: #fff;
+  }
+  .education-description {
+    color: #000;
+  }
+
+  .download-text { 
+      font-style: italic;
+   }
+
+  .education .download-section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: baseline;
+  }
+  .education-2 .download-section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: baseline;
+  }
+  button {
+    background-color: #3C9FF5;
+    color: #fff;
+  }
+  ul {
+    list-style-image: url('../../assets/star.png');
+  }
+
