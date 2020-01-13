@@ -1,0 +1,41 @@
+@mixin transition-ease {
+    transition: all 0.9s ease-in-out;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+  }
+  #content {
+    background: linear-gradient(to right, rgba(#fff, 0.9),
+        rgba(#fff, 1)),
+      url('../../assets/IMG_E0863.png') center top;
+    background-size: cover;
+    @include transition-ease;
+  }
+  
+  .heading {
+    color: #3C9FF5;
+    font-variant-caps: all-petite-caps;
+    font-size: 500;
+  }
+  .subheading {
+      font-variant-caps: all-petite-caps;
+      font-size: 500;
+  }
+  
+#surname {
+    color: #3C9FF5;
+  }
+  .content {
+    margin: 0;
+    padding: 0;
+  }
+
+ul {
+    list-style-image: url('../../assets/star.png');
+  }
+
+footer {
+    bottom: 0;
+    right: 0;
+}
