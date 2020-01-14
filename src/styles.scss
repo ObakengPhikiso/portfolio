@@ -54,3 +54,18 @@ h3 {
   font-weight: bolder;
   font-style: normal;
 }
+.ng-valid[required], .ng-valid.required {
+  border-left: 5px solid #3C9FF5;
+}
+.ng-invalid:not(form) {
+  border-left: 5px solid #a94442;
+}
+.success-snackbar {
+  background: #3C9FF5;
+}
+.warning-snackbar {
+  background: rgba(248, 185, 11, 0.671);
+}
+.danger-snackbar {
+  background: #a94442;
+}
