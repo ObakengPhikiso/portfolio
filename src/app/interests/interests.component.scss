@@ -39,3 +39,10 @@ footer {
 ul {
     list-style-image: url('../../assets/star.png');
   }
+.card {
+  border-left: solid 10px #3C9FF5;
+  border-right: solid 10px #3C9FF5;
+}
+button:hover {
+  @include transition-ease();
+}
