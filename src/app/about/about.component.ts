@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NotificationService } from '../services/notification.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { About } from './about';
-
+import { AngularFirestore } from '@angular/fire/firestore';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -10,7 +10,7 @@ import { About } from './about';
 })
 export class AboutComponent implements OnInit {
 
-  constructor(public readonly notification: NotificationService) { }
+  constructor(private readonly notification: NotificationService, private readonly fireStore: AngularFirestore) { }
 
   messageForm = new FormGroup({
     firstname: new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z]*')]),
@@ -22,12 +22,13 @@ export class AboutComponent implements OnInit {
 ngOnInit() {
 }
 
-submit(form: FormGroup) {
+async submit(form: FormGroup) {
   if (form.valid) {
-    this.notification.success(`Thanks ${form.value.firstname} for getting in contact with me, you'll get my response in no time`);
-  } else {
-    this.notification.danger(`Check all values are correct`);
-
+    await this.fireStore.collection('messages').add(form.value).then(() => {
+      this.notification.success(`Thanks ${form.value.firstname} for getting in contact with me, you'll get my response in no time`);
+    }).catch(err => {
+      this.notification.danger(err.message);
+    });
   }
 }
 }

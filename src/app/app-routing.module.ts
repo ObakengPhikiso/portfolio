@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: 'experience', component: ExperienceComponent, pathMatch: 'full'},
   {path: 'education', component: EducationComponent, pathMatch: 'full'},
   {path: 'skills', component: SkillsComponent, pathMatch: 'full'},
-  {path: 'interests', component: InterestsComponent, pathMatch: 'full'},
+  {path: 'certifications', component: InterestsComponent, pathMatch: 'full'},
   {path: 'awards', component: AwardsComponent, pathMatch: 'full'},
   {path: '', redirectTo: 'about', pathMatch: 'full'},
   {path: '**', redirectTo: 'about', pathMatch: 'full'},
