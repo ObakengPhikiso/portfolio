@@ -1,0 +1,93 @@
+@mixin transition-ease {
+    transition: all 0.9s ease-in-out;
+  }
+  
+  #surname {
+    color: #3C9FF5;
+  }
+  .subheading a {
+    color: #000;
+    cursor: pointer;
+  }
+  .heading {
+    color: #3C9FF5;
+    font-variant-caps: all-petite-caps;
+    font-size: 500;
+  }
+  .content {
+    margin: 0;
+    padding: 0;
+  }
+  .download-btn {
+    text-align: center;
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+  #content {
+    background:linear-gradient(to right, rgba(#fff, 0.9), 
+    rgba(#fff, 1)), 
+    url('../../assets/IMG_E0863.png') center top;
+    background-size: cover;
+    @include transition-ease;
+  }
+  #button {
+    font-weight: bold;
+  }
+  .social-icons a {
+    display: inline-block;
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: #3C9FF5;
+    color: #fff !important;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+    margin-right: 1rem;
+    @include transition-ease;
+  }
+  .social-icons a:hover {
+    color: #3C9FF5;
+  }
+  
+  .social-icons a:last-child {
+    margin-right: 0;
+  }
+  
+  .social-icons a:hover {
+    background-color: rgb(176, 217, 250);
+  }
+  
+  .dev-icons {
+    font-size: 3rem;
+  }
+  
+  .dev-icons .list-inline-item i:hover {
+    color: #BD5D38;
+  }
+  
+  footer {
+    bottom: 0;
+    right: 0;
+    top: auto;
+  }
+  button {
+    background-color: #3C9FF5;
+  }
+  button:hover {
+    @include transition-ease();
+  }
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  .message-header {
+    background-color: #3C9FF5;
+  }
+  .download-text {
+    font-style: italic;
+    font-size: small;
+  }
+  #login-card {
+    margin-top: 20%;
+  }

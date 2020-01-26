@@ -20,6 +20,7 @@ import { InterestsComponent } from './interests/interests.component';
 import { AwardsComponent } from './awards/awards.component';
 import { FooterComponent } from './footer/footer.component';
 import { environment } from 'src/environments/environment';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { environment } from 'src/environments/environment';
     SkillsComponent,
     InterestsComponent,
     AwardsComponent,
-    FooterComponent
+    FooterComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { environment } from 'src/environments/environment';
     FlexLayoutModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

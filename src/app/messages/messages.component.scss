@@ -1,0 +1,24 @@
+table {
+    width: 100%;
+  }
+
+  .mat-column-message {
+    width: 500px;
+    }
+    .table-head {
+      font-weight: bold;
+      font-size: medium;
+      color: black;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .hide {
+      display: none;
+    }
+    mat-footer-row mat-footer-cell {
+      justify-content: center;
+      font-style: italic;
+    }
+    .tableColor{
+      background-color: #fff;
+    }
+    

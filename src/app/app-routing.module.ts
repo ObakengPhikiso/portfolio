@@ -6,6 +6,8 @@ import { EducationComponent } from './education/education.component';
 import { SkillsComponent } from './skills/skills.component';
 import { InterestsComponent } from './interests/interests.component';
 import { AwardsComponent } from './awards/awards.component';
+import { MessagesComponent } from './messages/messages.component';
+import { AuthGuard } from './guards/auth.guard';
 
 
 const routes: Routes = [
@@ -14,7 +16,8 @@ const routes: Routes = [
   {path: 'education', component: EducationComponent, pathMatch: 'full'},
   {path: 'skills', component: SkillsComponent, pathMatch: 'full'},
   {path: 'certifications', component: InterestsComponent, pathMatch: 'full'},
-  {path: 'awards', component: AwardsComponent, pathMatch: 'full'},
+  {path: 'Mighty.1872Admin', component: AwardsComponent, pathMatch: 'full'},
+  {path: 'ythgim-Dashboard', component: MessagesComponent, pathMatch: 'full', canActivate: [AuthGuard]},
   {path: '', redirectTo: 'about', pathMatch: 'full'},
   {path: '**', redirectTo: 'about', pathMatch: 'full'},
 ];
