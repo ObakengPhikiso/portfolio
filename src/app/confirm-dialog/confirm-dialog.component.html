@@ -1,0 +1,26 @@
+<div>
+  <div class="content-container pb-1">
+      <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confirm action</h5>
+        </div>
+  </div>
+  <div class="modal-body">
+      <a  class="btn text-secondary" >
+          <i class="fa fa-exclamation-triangle " style="font-size:36px"></i>
+        </a>
+        {{data}}
+  </div>
+  <div class="modal-footer no-border">
+    <button mat-flat-button type="button" class="btn btn-secondary" data-dismiss="modal" [mat-dialog-close]="false">No</button>
+    <button mat-flat-button type="button" class="btn" style="background-color: #3C9FF5; color: #fff" [mat-dialog-close]="true">Yes</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+

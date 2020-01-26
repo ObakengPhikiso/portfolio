@@ -21,6 +21,7 @@ import { AwardsComponent } from './awards/awards.component';
 import { FooterComponent } from './footer/footer.component';
 import { environment } from 'src/environments/environment';
 import { MessagesComponent } from './messages/messages.component';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { MessagesComponent } from './messages/messages.component';
     InterestsComponent,
     AwardsComponent,
     FooterComponent,
-    MessagesComponent
+    MessagesComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +50,7 @@ import { MessagesComponent } from './messages/messages.component';
     AngularFireAuthModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ConfirmDialogComponent]
 })
 export class AppModule { }

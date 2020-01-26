@@ -64,10 +64,10 @@ export class FirebaseService {
   }
 
   deleteMessage(id: string) {
-    this.fireStore.doc(id).delete().then(() => {
-      return this.notification.danger('Message deleted');
+    return this.fireStore.collection('messages').doc(id).delete().then(() => {
+       this.notification.danger('Message deleted');
     }).catch(err => {
-      return this.notification.warning(err.message);
+       this.notification.warning(err.message);
     });
   }
   mapMessages(data: any, id: string) {
