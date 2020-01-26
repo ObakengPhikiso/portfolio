@@ -46,3 +46,9 @@ ul {
 button:hover {
   @include transition-ease();
 }
+  
+footer {
+  bottom: 0;
+  right: 0;
+  top: auto;
+}

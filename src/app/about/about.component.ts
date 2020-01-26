@@ -22,9 +22,9 @@ export class AboutComponent implements OnInit {
 ngOnInit() {
 }
 
-async submit(form: FormGroup) {
+ submit(form: FormGroup) {
   if (form.valid) {
-    await this.firebaseService.submit(form.value);
+     this.firebaseService.submit(form.value);
   }
 }
 }

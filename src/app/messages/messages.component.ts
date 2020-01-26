@@ -37,7 +37,7 @@ export class MessagesComponent implements OnInit {
    }
   }
  async onReply(email: EmailValidator) {
-   this.confirm.openConfirmDialog(`You are about to reply ${email}`);
+
  }
 
 }
