@@ -23,6 +23,7 @@ import { environment } from 'src/environments/environment';
 import { MessagesComponent } from './messages/messages.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ModalComponent } from './education/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { HttpClientModule } from '@angular/common/http';
     AwardsComponent,
     FooterComponent,
     MessagesComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

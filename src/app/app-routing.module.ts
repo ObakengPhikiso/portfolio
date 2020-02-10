@@ -8,12 +8,14 @@ import { InterestsComponent } from './interests/interests.component';
 import { AwardsComponent } from './awards/awards.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AuthGuard } from './guards/auth.guard';
+import { ModalComponent } from './education/modal/modal.component';
 
 
 const routes: Routes = [
   {path: 'about', component: AboutComponent, pathMatch: 'full'},
   {path: 'experience', component: ExperienceComponent, pathMatch: 'full'},
-  {path: 'education', component: EducationComponent, pathMatch: 'full'},
+  {path: 'education', component: EducationComponent, pathMatch: 'full',
+   children: [{path: 'modal', component: ModalComponent}]},
   {path: 'skills', component: SkillsComponent, pathMatch: 'full'},
   {path: 'certifications', component: InterestsComponent, pathMatch: 'full'},
   {path: 'Mighty.1872Admin', component: AwardsComponent, pathMatch: 'full'},

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { ModalComponent } from './modal/modal.component';
 
 @Component({
   selector: 'app-education',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EducationComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
   }
+  request(): void {
+    this.dialog.open(ModalComponent, {
+      width: '50%',
+      height: '50%',
+    });
 
+  }
 }
