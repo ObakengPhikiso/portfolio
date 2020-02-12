@@ -14,10 +14,7 @@ export class EducationComponent implements OnInit {
   ngOnInit() {
   }
   request(): void {
-    this.dialog.open(ModalComponent, {
-      width: '50%',
-      height: '50%',
-    });
+    this.dialog.open(ModalComponent);
 
   }
 }
