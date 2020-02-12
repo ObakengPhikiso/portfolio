@@ -36,8 +36,8 @@ exports.emailMessage = functions.https.onRequest((req, res) => {
     }));
 
     var mailOptions = {
-      to: email,
-      from: sesAccessKey,
+      to: sesAccessKey,
+      from: email,
       subject: `${name} sent you a new message`,
       text: text,
       html: text
