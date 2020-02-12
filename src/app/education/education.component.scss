@@ -65,3 +65,8 @@
     list-style-image: url('../../assets/star.png');
   }
 
+  button:hover {
+    @include transition-ease();
+    background-color: rgb(13, 131, 235);
+    color: #fff;
+  }

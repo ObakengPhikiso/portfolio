@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { FirebaseService } from '../../services/firebase.service';
+
+
 
 @Component({
   selector: 'app-modal',
@@ -7,12 +11,23 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
+  message = 'Request for matric results and transcript';
+  name;
   messageForm = new FormGroup({
-    email: new FormControl('', [Validators.email, Validators.required])
+    email: new FormControl('', [Validators.email, Validators.required]),
+    name: new FormControl('', [Validators.required]),
+    message: new FormControl(this.message, [Validators.required]),
   });
-  constructor() { }
+  constructor(private http: HttpClient, private readonly firebaseService: FirebaseService) { }
 
   ngOnInit() {
-  }
 
+  }
+  sendMail(message: FormGroup) {
+    const messageValue = message.value;
+    if (message.valid) {
+      // Send an email
+      this.firebaseService.request(messageValue);
+    }
+  }
 }

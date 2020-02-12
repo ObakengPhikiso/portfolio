@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { NotificationService } from '../services/notification.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { About } from '../about/about';
-import { Messages } from '../interfaces/messages';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Observable, of } from 'rxjs';
 import { first, switchMap } from 'rxjs/operators';
@@ -54,13 +53,18 @@ export class FirebaseService {
       this.notification.danger(err.message);
     });
   }
-
+  request(message: any) {
+    this.http.post('https://us-central1-obakeng-phikiso.cloudfunctions.net/emailMessage', message).subscribe(() => {
+    this.notification.success('email sent');
+    }, err => {
+      return this.notification.danger(err.message);
+    });
+  }
   async getAllMessages() {
     this.fireStore.collection('messages').get().subscribe(messages => {
       messages.forEach((message) => {
         return this.allMessages.push(this.mapMessages(message.data(), message.id));
       });
-      console.log(this.allMessages);
       return this.allMessages;
     });
   }
