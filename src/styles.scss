@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@mixin transition-ease {
+  transition: all 0.9s ease-in-out;
+}
 
 html,
 body {
@@ -89,4 +92,29 @@ h3 {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(7, 139, 255); 
+}
+
+.social-icons a {
+  display: inline-block;
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: #3C9FF5;
+  color: #fff !important;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 3.5rem;
+  margin-right: 1rem;
+  @include transition-ease;
+}
+.social-icons a:hover {
+  color: #3C9FF5;
+}
+
+.social-icons a:last-child {
+  margin-right: 0;
+}
+
+.social-icons a:hover {
+  background-color: rgb(5, 105, 187);
 }

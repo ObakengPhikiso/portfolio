@@ -33,30 +33,7 @@
 #button {
   font-weight: bold;
 }
-.social-icons a {
-  display: inline-block;
-  height: 3.5rem;
-  width: 3.5rem;
-  background-color: #3C9FF5;
-  color: #fff !important;
-  border-radius: 100%;
-  text-align: center;
-  font-size: 1.5rem;
-  line-height: 3.5rem;
-  margin-right: 1rem;
-  @include transition-ease;
-}
-.social-icons a:hover {
-  color: #3C9FF5;
-}
 
-.social-icons a:last-child {
-  margin-right: 0;
-}
-
-.social-icons a:hover {
-  background-color: rgb(176, 217, 250);
-}
 
 .dev-icons {
   font-size: 3rem;

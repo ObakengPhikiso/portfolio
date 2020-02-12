@@ -1,8 +1,4 @@
 
-footer {
-    bottom: 0;
-    right: 0;
-}
 @mixin transition-ease {
     transition: all 0.9s ease-in-out;
   }
@@ -47,8 +43,6 @@ button:hover {
   @include transition-ease();
 }
   
-footer {
-  bottom: 0;
-  right: 0;
-  top: auto;
+.space {
+  padding: 100px;
 }
