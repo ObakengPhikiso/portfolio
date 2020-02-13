@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 import { FirebaseService } from '../../services/firebase.service';
 
 
@@ -18,7 +17,7 @@ export class ModalComponent implements OnInit {
     name: new FormControl('', [Validators.required]),
     message: new FormControl(this.message, [Validators.required]),
   });
-  constructor(private http: HttpClient, private readonly firebaseService: FirebaseService) { }
+  constructor( private readonly firebaseService: FirebaseService) { }
 
   ngOnInit() {
 
