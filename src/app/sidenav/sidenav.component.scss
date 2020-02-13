@@ -75,3 +75,50 @@
 .bgColor {
   background: #3C9FF5; 
 }
+// Navigation animations
+@keyframes navAnimation{
+  0%{
+      transform: rotate(0);
+      opacity: 0;
+      }
+  20%{
+      transform: rotate(0) translateX(-300px);
+      opacity: .2;
+      }
+  35%{
+      transform: rotate(0) scale(0) translateX(-300px);
+      opacity: .2;
+      }
+  50%{
+      transform: rotate(0) translateX(-150px);
+      opacity: .5;
+      }
+  65%{
+      transform: rotate(0) translateX(-100px);
+      opacity: .7;
+      }
+  85%{
+      transform: rotate(0) translateX(-50px);
+      opacity: .8;
+      }
+  100%{
+      transform: rotate(0);
+      opacity: 1;
+      }
+}
+
+.item-1 {
+  animation: navAnimation .5s forwards 0s ease-in-out;
+}
+.item-2 {
+  animation: navAnimation .6s forwards 0s ease-in-out;
+}
+.item-3 {
+  animation: navAnimation .7s forwards 0s ease-in-out;
+}
+.item-4 {
+  animation: navAnimation .8s forwards 0s ease-in-out;
+}
+.item-5 {
+  animation: navAnimation .9s forwards 0s ease-in-out;
+}
