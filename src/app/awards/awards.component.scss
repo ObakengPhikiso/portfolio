@@ -23,13 +23,7 @@
     margin-bottom: 5%;
     margin-top: 5%;
   }
-  #content {
-    background:linear-gradient(to right, rgba(#fff, 0.9), 
-    rgba(#fff, 1)), 
-    url('../../assets/IMG_E0863.png') center top;
-    background-size: cover;
-    @include transition-ease;
-  }
+
   #button {
     font-weight: bold;
   }

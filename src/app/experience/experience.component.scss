@@ -5,13 +5,6 @@ p {
   padding: 0;
   margin: 0;
 }
-#content {
-  background: linear-gradient(to right, rgba(#fff, 0.9),
-      rgba(#fff, 1)),
-    url('../../assets/IMG_E0863.png') center top;
-  background-size: cover;
-  @include transition-ease;
-}
 
 .heading {
   color: #3C9FF5;
