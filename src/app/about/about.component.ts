@@ -9,7 +9,8 @@ import { FirebaseService } from '../services/firebase.service';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-
+  isLoading = false;
+  href;
   constructor(private readonly firebaseService: FirebaseService) { }
 
   messageForm = new FormGroup({
@@ -22,7 +23,13 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  downloadCV() {
+    this.isLoading = true;
+    this.href = '../../assets/documents/CV_Obakeng Phikiso.pdf';
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 4000);
+  }
   async submit(form: FormGroup) {
     const fname = `${form.value.firstname} ${form.value.lastname}`;
     console.log(fname);

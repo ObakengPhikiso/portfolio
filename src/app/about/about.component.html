@@ -25,13 +25,12 @@
           </p>
         </div>
         <div class="download-btn">
-          <a href="../../assets/documents/CV_Obakeng Phikiso.pdf" target="_blank" rel="noopener noreferrer">
-            <button type="button" id="button" class="btn btn-primary pl-5 pr-5">
-              Download CV
+          <a  [href]="href" (click) = "downloadCV()">
+            <button type="button" id="button" [disabled]="isLoading" class="btn btn-primary pl-5 pr-5">
+             <img *ngIf="isLoading" src="../../assets/spinner.gif" alt="" height="20" width="20" class="float-left"> Download CV
             </button>
           </a>
         </div>
-
       </section>
 
       <div class="card mat-elevation-z5 rounded-0 mb-5">
